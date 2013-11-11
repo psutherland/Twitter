@@ -1,0 +1,12 @@
+<h1>Single User Twitter Challenge</h1>
+
+<%= form_for @tweet do |f| %>
+	<%= f.text_field :content %>
+	<%= f.submit %>
+<% end %>
+
+<div id="tweets">
+	<% @tweets.each do |tweet| %>
+		<p class="tweet"><%= tweet.content %></p>
+	<% end %>
+</div>
