@@ -10,7 +10,9 @@ class TweetsController < ApplicationController
   		redirect_to :action => :index
   	else
   		@tweets = Tweet.order("id DESC")
-  		render :action => :index
+  		@error = "Tweet did not save"
+      render :action => :index
+
   	end
   end
 end

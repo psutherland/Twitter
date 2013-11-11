@@ -1,5 +1,7 @@
 <h1>Single User Twitter Challenge</h1>
 
+<p class="error"><%= @error %></p>
+
 <%= form_for @tweet do |f| %>
 	<%= f.text_field :content %>
 	<%= f.submit %>
